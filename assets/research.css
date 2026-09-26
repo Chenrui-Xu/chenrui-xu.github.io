@@ -61,12 +61,18 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .project-grid h3 { font-size: 18px; line-height: 1.5; }
 .project-grid .entry-description { font-size: 14px; line-height: 1.8; }
 .project-grid .resource-links { gap: 6px 15px; }
-.project-group { margin-top: 28px; }
-.project-group + .project-group { margin-top: 42px; }
-.research-page .project-group > h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 23px; color: var(--accent); }
+.project-group { border-bottom: 1px solid var(--line); }
+.project-group > summary { padding-block: 20px; color: var(--accent); }
+.project-group > summary::marker { color: var(--accent); }
+.research-page .project-group > summary > h3 { display: inline; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 23px; color: var(--accent); }
+.project-list { padding-left: 20px; }
 .project-item { padding-block: 21px; border-bottom: 1px solid var(--line); }
+.project-item:first-child { padding-top: 2px; }
+.project-item:last-child { border-bottom: 0; padding-bottom: 28px; }
 .project-item h4 { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--ink); }
 .project-meta { margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.project-advisors { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+.project-advisors a { text-decoration: underline; text-decoration-color: #c6b080; }
 .project-description { margin-top: 8px; font-size: 15px; line-height: 1.75; }
 .project-item .resource-links { margin-top: 11px; }
 .project-details { margin-top: 10px; font-size: 13px; line-height: 1.7; color: var(--muted); }
@@ -94,6 +100,8 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   .section-heading h1, .section-heading h2 { font-size: 26px; }
   .research-header { min-height: 76px; }
   .project-item h4 { font-size: 17px; }
+  .research-page .project-group > summary > h3 { font-size: 20px; }
+  .project-list { padding-left: 0; }
   .project-description { font-size: 14px; }
   .research-page h3 { font-size: 19px; }
   .research-section + .research-section { margin-top: 40px; }
