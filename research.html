@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Publications by Chenrui (Eric) Xu at Carnegie Mellon University.">
+    <meta name="description" content="Publications, doctoral milestones and research projects by Chenrui (Eric) Xu at Carnegie Mellon University.">
     <meta name="theme-color" content="#fffefa">
     <title>Research | Chenrui (Eric) Xu</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/research.css?v=4">
+    <link rel="stylesheet" href="assets/style.css?v=2">
+    <link rel="stylesheet" href="assets/research.css?v=5">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header container">
-      <a class="welcome" href="index.html">Welcome to my page<span aria-hidden="true">.</span></a>
+    <header class="site-header research-header container">
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="research.html" aria-current="page">Research</a>
@@ -21,14 +20,11 @@
       </nav>
     </header>
 
-    <main id="main" class="research-page publications-only container">
-      <div class="research-heading">
-        <h1>Research</h1>
-      </div>
+    <main id="main" class="research-page research-overview container" aria-label="Research">
       <div class="research-layout">
         <div class="research-content">
           <section class="research-section" id="publications" aria-labelledby="publications-title">
-            <div class="section-heading"><h2 id="publications-title">Publications</h2></div>
+            <div class="section-heading"><h1 id="publications-title">Publications</h1></div>
             <article class="publication-entry invited-entry">
               <p class="citation">Xu, C., Akinci, B., &amp; McComb, C. Invited to submit to the Special Collection “<a href="https://ascelibrary.org/jccee5/cfp-artificial-intelligence-resilient-sustainable-systems">Artificial Intelligence for Resilient and Sustainable Civil Infrastructure and Construction Systems</a>,” <em>Journal of Computing in Civil Engineering</em>. <span class="citation-status">Processing.</span></p>
             </article>
@@ -55,7 +51,113 @@
             </details>
           </section>
 
+          <section class="research-section" id="milestones" aria-labelledby="milestones-title">
+            <div class="section-heading"><h2 id="milestones-title">Milestones</h2></div>
+            <article class="milestone-entry">
+              <p class="entry-meta">June 9, 2026 · Carnegie Mellon University</p>
+              <h3>PhD Qualifying Examination · Unconditional Pass</h3>
+              <details class="committee-details">
+                <summary>Committee and Topics</summary>
+                <dl class="committee-list">
+                <div><dt><a href="https://cee.engineering.cmu.edu/directory/bios/akinci-burcu.html">Burcu Akinci</a></dt><dd>AI-enabled decarbonization decisions across the facility life cycle</dd></div>
+                <div><dt><a href="https://www.meche.engineering.cmu.edu/directory/bios/mccomb-christopher.html">Christopher McComb</a></dt><dd>Time value of money, compute, and carbon in infrastructure decisions</dd></div>
+                <div><dt><a href="https://engineering.cmu.edu/directory/bios/tang-pingbo.html">Pingbo Tang</a></dt><dd>Human–AI collaboration in AEC coordination and modular manufacturing</dd></div>
+                <div><dt><a href="https://engineering.cmu.edu/directory/bios/samaras-costa.html">Costa Samaras</a></dt><dd>AI-driven data-center growth, electricity demand, emissions, and affordability in New York</dd></div>
+                </dl>
+                <p class="entry-description">Developed and defended an energy assessment of a deployed AI-assisted decision-support system.</p>
+              </details>
+            </article>
+          </section>
 
+          <section class="research-section" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading"><h2 id="projects-title">Research Projects</h2></div>
+            <section class="project-group" aria-labelledby="cmu-projects">
+      <h3 id="cmu-projects">Carnegie Mellon University</h3>
+      <div class="project-list"><article class="project-item" id="project-ml-production">
+      <h4>Machine Learning in Production</h4>
+      <p class="project-meta">17-745 · Spring 2026 · Team and individual projects</p>
+      <p class="project-description">Production ML systems, LLM product features, risk analysis, and guardrails for engineering agents.</p>
+      <details class="project-details"><summary>Selected work</summary><ul><li>Movie Recommendation Service: a team deployment with my contributions to cold-start/SVD models, evaluation, monitoring, A/B tests, and feedback-loop analysis.</li><li>Zulip LLM Features: individual implementations of Message Recap and Topic Title Improver.</li><li>LLM-Assisted Risk Analysis: stakeholder and requirements analysis, with fault trees for an ML-enabled dashcam scenario.</li><li>Deterministic MCP Guardrails for Safe Power-Pathway Design Agents: an individual course paper and constraint-based testbed.</li></ul></details>
+      <div class="resource-links"><a href="assets/research/mcp-guardrails-course-paper-2026.pdf">Course paper (PDF)</a></div>
+    </article>
+<article class="project-item" id="project-budgetbench">
+      <h4>BudgetBench</h4>
+      <p class="project-meta">24-880 AI Agents for Engineers · Spring 2026 · Team project</p>
+      <p class="project-description">Evaluating tool-using code agents under explicit tool-call budgets.</p>
+      <details class="project-details"><summary>Team and contribution</summary><ul><li>Chenrui Xu, Hanyu Jin, and Sylvia Li. My role included project leadership, evaluation harnesses, and metrics.</li></ul></details>
+      <div class="resource-links"><a href="assets/research/budgetbench-course-report-2026.pdf">Report (PDF)</a></div>
+    </article></div>
+    </section>
+<section class="project-group" aria-labelledby="berkeley-projects">
+      <h3 id="berkeley-projects">University of California, Berkeley</h3>
+      <div class="project-list"><article class="project-item" id="project-quantum-denoising">
+      <h4>Hybrid Quantum–Classical Image Denoising</h4>
+      <p class="project-meta">Research collaboration and benchmark design</p>
+      <p class="project-description">An exploration with Phillip Kerger, extended through benchmark design for controlled comparisons of quantum-layer contributions, reconstruction quality, and computational cost.</p>
+      <details class="project-details"><summary>Benchmark design</summary><ul><li>Matched classical and quantum modules within a shared image-reconstruction architecture.</li><li>Frozen-parameter and no-entanglement ablations to isolate the quantum layer’s contribution.</li><li>Comparisons across training-data sizes and image-noise levels.</li><li>Joint assessment of reconstruction quality, parameter count, and training and inference time.</li></ul></details>
+      <div class="resource-links"><a href="https://ieor.berkeley.edu/people/phillip-kerger/">Phillip Kerger</a></div>
+    </article>
+<article class="project-item" id="project-shared-mobility">
+      <h4>Pricing and Matching for Shared Mobility</h4>
+      <p class="project-meta">IEOR C253 · Team project, 2025 · Individual extension, 2026</p>
+      <p class="project-description">Dynamic pricing and rider matching, with an event-driven simulator and approximate dynamic programming extension.</p>
+
+      <div class="resource-links"><a href="https://github.com/Eric-XC/calyber-rideshare-policies">Code</a> <a href="assets/research/calyber-pricing-matching-technical-report-2026.pdf">Technical report (PDF)</a></div>
+    </article>
+<article class="project-item" id="project-financial-transformers">
+      <h4>Financial Time-Series Forecasting with Transformers</h4>
+      <p class="project-meta">MEng team capstone, 2024–2025 · Individual extension, 2026</p>
+      <p class="project-description">Transformer-based financial forecasting, with a later public-data implementation comparing compact Transformer models against an LSTM baseline.</p>
+      <details class="project-details"><summary>Team and advisors</summary><ul><li>Team: Mingrui Yang, Chenrui Xu, Haoruo Liu, Yin Piao, Zeping Sheng, and Yuan Ci.</li><li>Advisors: Xin Guo, Thibaut Mastrolia, and Lizeng Zhang.</li></ul></details>
+      <div class="resource-links"><a href="https://github.com/Eric-XC/ucb-e295-team168-financial-transformers">Code</a> <a href="assets/research/financial-transformers-capstone-poster-2025.pdf">Capstone poster (PDF)</a></div>
+    </article>
+<article class="project-item" id="project-airbnb-optimization">
+      <h4>Airbnb Pricing and Property Selection</h4>
+      <p class="project-meta">2024 · Team course project</p>
+      <p class="project-description">Choice modeling and mixed-integer optimization for short-term rental pricing and property selection.</p>
+      <details class="project-details"><summary>Team</summary><ul><li>Chenrui Xu, Zhiming Fan, Zikai Liu, Yunhao Liang, Chenxin Wang, and Chirui Huang.</li></ul></details>
+      <div class="resource-links"><a href="assets/research/airbnb-pricing-optimization-2024.pdf">Report (PDF)</a></div>
+    </article></div>
+    </section>
+<section class="project-group" aria-labelledby="edinburgh-projects">
+      <h3 id="edinburgh-projects">University of Edinburgh</h3>
+      <div class="project-list"><article class="project-item" id="project-proof-education">
+      <h4>Introduction to Proof in UK Universities</h4>
+      <p class="project-meta">2024 · Undergraduate team research</p>
+      <p class="project-description">Curriculum analysis and student perspectives on how UK universities introduce mathematical proof.</p>
+      <details class="project-details"><summary>Team</summary><ul><li>Alexander Bell, Pablo Ortuno Floria, Andrew Shaw, and Chenrui Xu.</li></ul></details>
+      <div class="resource-links"><a href="assets/research/proof-education-uk-universities-2024.pdf">Report (PDF)</a></div>
+    </article>
+<article class="project-item" id="project-hotel-cancellations">
+      <h4>Predicting Hotel Booking Cancellations</h4>
+      <p class="project-meta">2024 · Course project with Yu Zhang</p>
+      <p class="project-description">Statistical learning for booking cancellations using regression, regularization, and random forests.</p>
+
+      <div class="resource-links"><a href="assets/research/hotel-booking-cancellations-2024.pdf">Report (PDF)</a></div>
+    </article>
+<article class="project-item" id="project-scottish-weather">
+      <h4>Modeling Scottish Weather</h4>
+      <p class="project-meta">2023 · Individual course project</p>
+      <p class="project-description">Seasonal and spatial precipitation modeling with harmonic regression and evaluation at held-out weather stations.</p>
+
+      <div class="resource-links"><a href="assets/research/scottish-weather-statistical-modelling-2023.pdf">Report (PDF)</a></div>
+    </article>
+<article class="project-item" id="project-mathematical-proofs">
+      <h4>Selected Mathematical Proofs</h4>
+      <p class="project-meta">Undergraduate coursework · Revised 2026</p>
+      <p class="project-description">Expositions in analysis, numerical differential equations, and algebraic geometry, with revised proofs and symbolic checks.</p>
+
+      <div class="resource-links"><a href="assets/research/selected-proofs-analysis-revised-2026.pdf">Analysis (PDF)</a> <a href="assets/research/numerical-odes-proofs-revised-2026.pdf">Numerical ODEs (PDF)</a> <a href="assets/research/cubic-flexes-revised-2026.pdf">Cubic curves (PDF)</a> <a href="assets/research/mathematical-proof-sources.zip">Sources (ZIP)</a></div>
+    </article>
+<article class="project-item" id="project-nonlinear-dynamics">
+      <h4>Nonlinear Dynamics and Epidemic Models</h4>
+      <p class="project-meta">2022–2023 · Individual computational coursework</p>
+      <p class="project-description">Computational studies of nonlinear oscillators, chaos, and compartmental epidemic models.</p>
+
+      <div class="resource-links"><a href="assets/research/nonlinear-dynamics-selected-excerpts-2022.pdf">Nonlinear dynamics (PDF)</a> <a href="assets/research/epidemic-ode-simulation-2023.pdf">Epidemic models (PDF)</a></div>
+    </article></div>
+    </section>
+          </section>
         </div>
       </div>
     </main>
