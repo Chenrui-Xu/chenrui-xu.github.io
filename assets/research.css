@@ -8,6 +8,7 @@
 .section-index a:hover { color: var(--link); text-decoration: underline; }
 .section-index span { color: var(--accent); font-size: 11px; font-variant-numeric: tabular-nums; }
 .research-content { min-width: 0; }
+.publications-only .research-layout { display: block; max-width: 920px; }
 .research-section { scroll-margin-top: 28px; }
 .research-section + .research-section { margin-top: 55px; }
 .section-heading { display: flex; align-items: baseline; gap: 13px; border-bottom: 1px solid var(--ink); padding-bottom: 14px; }
@@ -19,8 +20,8 @@
 .citation { font-size: 16px; line-height: 1.85; }
 .citation a { text-decoration: underline; text-decoration-color: #c6b080; }
 .citation em { color: var(--ink); }
+.citation-status { color: var(--muted); font-size: .875em; }
 .earlier-entry .citation { font-size: 15px; }
-.publication-group-note { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 0 0 18px 18px; }
 .entry-meta { color: var(--accent); font-size: 12px; line-height: 1.65; margin-bottom: 9px; }
 .research-page h3 { font-size: 20px; line-height: 1.5; font-weight: 600; letter-spacing: -.25px; }
 .authors { margin-top: 9px; font-size: 13px; color: var(--muted); line-height: 1.7; }
