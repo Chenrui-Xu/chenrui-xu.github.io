@@ -51,7 +51,8 @@ h2 { font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weigh
 .seal-frame { position: relative; display: block; width: 54px; height: 54px; overflow: hidden; border-radius: 50%; margin-top: 2px; }
 .seal-frame .berkeley-mark { position: absolute; width: 220%; height: auto; max-width: none; left: 50%; top: 50%; margin: 0; transform: translate(-50%, -50%); }
 .research-groups { margin-top: 24px; padding-top: 25px; border-top: 1px solid var(--line); }
-.group-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.group-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: start; }
+.group-list li + li { padding-top: 20px; border-top: 1px solid var(--line); }
 
 .group-list h3 { font-family: inherit; font-size: 15px; font-weight: 600; line-height: 1.5; }
 .group-list h3 a { color: var(--ink); }
@@ -59,7 +60,6 @@ h2 { font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weigh
 .group-logo-link, .group-logo-link img { width: 40px; height: 40px; display: block; }
 .group-description { margin-top: 5px; font-size: 13px; line-height: 1.6; }
 .group-advisor { margin-top: 5px; font-size: 12px; line-height: 1.6; }
-.mosaic-name { letter-spacing: .07em; }
 .main-column { padding-top: 4px; min-width: 0; }
 .introduction > p { margin-bottom: 24px; }
 .introduction > p:last-child { margin-bottom: 0; }
@@ -97,5 +97,4 @@ blockquote p { font-family: Georgia, "Times New Roman", serif; font-size: 21px; 
 @media (max-width: 820px) { .container { width: calc(100% - 48px); } .site-header { min-height: 99px; } .welcome { font-size: 22px; } nav { gap: 23px; } nav a, nav .nav-pending { font-size: 15px; } .home-layout { grid-template-columns: 250px minmax(0, 1fr); gap: 32px; padding-top: 35px; } .identity h1 { white-space: normal; font-size: 32px; } .education-list li { grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; } .university-mark, .seal-frame { width: 44px; height: 44px; } .interests-list, .group-list { grid-template-columns: 1fr; } }
 @media (max-width: 680px) { .container { width: calc(100% - 40px); } .site-header { align-items: flex-start; flex-direction: column; gap: 15px; padding-block: 22px 17px; } .welcome { font-size: 24px; } nav { gap: 31px; } nav a, nav .nav-pending { font-size: 16px; padding-block: 3px; } .home-layout { display: flex; flex-direction: column; gap: 36px; padding-top: 30px; padding-bottom: 42px; } .profile { display: contents; } .identity { order: 0; } .identity h1 { font-size: 38px; } .role { margin-top: 7px; } .portrait { order: 1; margin: -15px 0 0; width: min(100%, 400px); } .main-column { order: 2; padding-top: 0; } .education { order: 3; margin-top: 0; width: 100%; padding-top: 25px; border-top: 1px solid var(--line); } .education-list li { grid-template-columns: minmax(0, 1fr) 56px; padding-block: 20px; gap: 25px; } .university-mark, .seal-frame { width: 56px; height: 56px; } .degree, .institution { font-size: 15px; } .degree-note, .dates { font-size: 14px; } .document-layout { padding-top: 33px; } .document-layout > h1 { font-size: 37px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-@media (max-width: 900px) { .group-list { grid-template-columns: 1fr; gap: 20px; } }
-@media (max-width: 680px) { .profile > .contact { order: 4; width: 100%; margin-top: 0; } .research-groups { margin-top: 28px; } .group-list { grid-template-columns: 1fr; gap: 20px; } .group-list li + li { padding-top: 20px; border-top: 1px solid var(--line); } .group-list h3 { font-size: 16px; } .group-description { font-size: 14px; } .group-advisor { font-size: 13px; } }
+@media (max-width: 680px) { .profile > .contact { order: 4; width: 100%; margin-top: 0; } .research-groups { margin-top: 28px; } .group-list h3 { font-size: 16px; } .group-description { font-size: 14px; } .group-advisor { font-size: 13px; } }
