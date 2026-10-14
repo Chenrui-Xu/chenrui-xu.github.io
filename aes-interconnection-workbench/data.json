@@ -1,0 +1,872 @@
+{
+  "schema_version": 1,
+  "source": "synthetic",
+  "exported_at": "2026-10-14T02:12:55.564420+00:00",
+  "boundary": "Published verified study snapshots. Read-only GitHub Pages review; shared edits and live solver require the separate hosted backend. Synthetic DC screening is not formal ERCOT approval.",
+  "projects": [
+    {
+      "id": "A",
+      "name": "Atlas Data Campus",
+      "kind": "load"
+    },
+    {
+      "id": "B",
+      "name": "Bay Manufacturing",
+      "kind": "load"
+    },
+    {
+      "id": "C",
+      "name": "Cedar Compute",
+      "kind": "load"
+    },
+    {
+      "id": "G0",
+      "name": "Existing Supply",
+      "kind": "generation"
+    },
+    {
+      "id": "G1",
+      "name": "Cedar Supporting Generation",
+      "kind": "generation"
+    }
+  ],
+  "runs": [
+    {
+      "name": "Baseline \u2014 G1 ready in 2029",
+      "run": {
+        "id": "712b6c44-46c5-470e-a94a-c08b496b4dbe",
+        "scenario_id": "5e1428b7-e090-43f1-ae4b-d32767db3e87",
+        "status": "Succeeded",
+        "input_hash": "51656650f7124d76f882bc986e9ed0028d6a140efd8491eb2eb5827916e4b836",
+        "study_version": 1,
+        "result": {
+          "check": {
+            "max_residual_mw": 2.842170943040401e-14,
+            "passed": true,
+            "violations": []
+          },
+          "input_hash": "a84ac3fb011d5d3ce6754cdc4ffa96b8f569b97ecff5b40cf6702ea401ee4db7",
+          "model_version": "dc-1",
+          "objective": 1300.0,
+          "operations": [
+            {
+              "angles": {
+                "0": 0.0,
+                "1": -0.3,
+                "2": -0.4,
+                "3": -0.3
+              },
+              "condition": "peak",
+              "generators": [
+                {
+                  "available_mw": 500,
+                  "id": "G0",
+                  "p_mw": 300.0
+                },
+                {
+                  "available_mw": 0,
+                  "id": "G1",
+                  "p_mw": 0.0
+                }
+              ],
+              "lines": [
+                {
+                  "binding": true,
+                  "flow_mw": 300.0,
+                  "id": "L01",
+                  "limit_mw": 300
+                },
+                {
+                  "binding": true,
+                  "flow_mw": 100.0,
+                  "id": "L12",
+                  "limit_mw": 100
+                },
+                {
+                  "binding": false,
+                  "flow_mw": 0.0,
+                  "id": "L13",
+                  "limit_mw": 150
+                }
+              ],
+              "loads": [
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "A",
+                  "served_mw": 200.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "B",
+                  "served_mw": 100.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "C",
+                  "served_mw": 0.0
+                }
+              ],
+              "year": 2028
+            },
+            {
+              "angles": {
+                "0": 0.0,
+                "1": -0.3,
+                "2": -0.4,
+                "3": -0.3
+              },
+              "condition": "peak",
+              "generators": [
+                {
+                  "available_mw": 500,
+                  "id": "G0",
+                  "p_mw": 300.0
+                },
+                {
+                  "available_mw": 200,
+                  "id": "G1",
+                  "p_mw": 200.0
+                }
+              ],
+              "lines": [
+                {
+                  "binding": true,
+                  "flow_mw": 300.0,
+                  "id": "L01",
+                  "limit_mw": 300
+                },
+                {
+                  "binding": true,
+                  "flow_mw": 100.0,
+                  "id": "L12",
+                  "limit_mw": 100
+                },
+                {
+                  "binding": false,
+                  "flow_mw": 0.0,
+                  "id": "L13",
+                  "limit_mw": 150
+                }
+              ],
+              "loads": [
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "A",
+                  "served_mw": 200.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "B",
+                  "served_mw": 100.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "C",
+                  "served_mw": 200.0
+                }
+              ],
+              "year": 2029
+            },
+            {
+              "angles": {
+                "0": 0.0,
+                "1": -0.3,
+                "2": -0.4,
+                "3": -0.3
+              },
+              "condition": "peak",
+              "generators": [
+                {
+                  "available_mw": 500,
+                  "id": "G0",
+                  "p_mw": 300.0
+                },
+                {
+                  "available_mw": 200,
+                  "id": "G1",
+                  "p_mw": 200.0
+                }
+              ],
+              "lines": [
+                {
+                  "binding": true,
+                  "flow_mw": 300.0,
+                  "id": "L01",
+                  "limit_mw": 300
+                },
+                {
+                  "binding": true,
+                  "flow_mw": 100.0,
+                  "id": "L12",
+                  "limit_mw": 100
+                },
+                {
+                  "binding": false,
+                  "flow_mw": 0.0,
+                  "id": "L13",
+                  "limit_mw": 150
+                }
+              ],
+              "loads": [
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "A",
+                  "served_mw": 200.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "B",
+                  "served_mw": 100.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "C",
+                  "served_mw": 200.0
+                }
+              ],
+              "year": 2030
+            }
+          ],
+          "reason": "Optimal DC screening result; independent physical and commitment checks passed",
+          "rows": [
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "A",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 0,
+              "year": 2028
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "A",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 0,
+              "year": 2029
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "A",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 0,
+              "year": 2030
+            },
+            {
+              "commissioning_cap_mw": 100.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "B",
+              "served_mw": 100.0,
+              "served_mwh": 100.0,
+              "waiting_years": 0,
+              "year": 2028
+            },
+            {
+              "commissioning_cap_mw": 100.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "B",
+              "served_mw": 100.0,
+              "served_mwh": 100.0,
+              "waiting_years": 0,
+              "year": 2029
+            },
+            {
+              "commissioning_cap_mw": 100.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "B",
+              "served_mw": 100.0,
+              "served_mwh": 100.0,
+              "waiting_years": 0,
+              "year": 2030
+            },
+            {
+              "commissioning_cap_mw": 0.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "C",
+              "served_mw": 0.0,
+              "served_mwh": 0.0,
+              "waiting_years": 1,
+              "year": 2028
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "C",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 1,
+              "year": 2029
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "C",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 1,
+              "year": 2030
+            }
+          ],
+          "settings": {
+            "curtailment_penalty": 0.001,
+            "energy_scope": "sampled-period MWh",
+            "hours_per_year": 1,
+            "method": "highs-ds",
+            "monotonic_uncommitted_capacity": false,
+            "options": {
+              "dual_feasibility_tolerance": 1e-08,
+              "presolve": true,
+              "primal_feasibility_tolerance": 1e-08,
+              "time_limit": 10
+            },
+            "primary": "maximize equally weighted served MWh minus 0.001 * curtailed MWh",
+            "reference_bus": 0,
+            "secondary": "fix primary optimum; lexicographically maximize service by load ID then year; minimize total commissioned MW",
+            "susceptance_units": "MW/radian",
+            "tolerance_mw": 1e-06,
+            "waiting_threshold": "First year >= min(1 MW, requested MW * q) weighted-average service; null if unreached"
+          },
+          "solver_version": "scipy-1.17.0/HiGHS-1.8.0",
+          "status": "Succeeded"
+        }
+      },
+      "snapshot": {
+        "input": {
+          "base_loads": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0
+          },
+          "buses": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "conditions": [
+            {
+              "availability": 1,
+              "hours": 1,
+              "id": "peak"
+            }
+          ],
+          "generators": [
+            {
+              "bus": 0,
+              "capacity_mw": 500,
+              "id": "G0",
+              "ready_year": 2028
+            },
+            {
+              "bus": 3,
+              "capacity_mw": 200,
+              "id": "G1",
+              "ready_year": 2029
+            }
+          ],
+          "lines": [
+            {
+              "from_bus": 0,
+              "id": "L01",
+              "limit_mw": 300,
+              "susceptance": 1000,
+              "to_bus": 1,
+              "upgrade_limit_mw": null,
+              "upgrade_year": null
+            },
+            {
+              "from_bus": 1,
+              "id": "L12",
+              "limit_mw": 100,
+              "susceptance": 1000,
+              "to_bus": 2,
+              "upgrade_limit_mw": null,
+              "upgrade_year": null
+            },
+            {
+              "from_bus": 1,
+              "id": "L13",
+              "limit_mw": 150,
+              "susceptance": 1000,
+              "to_bus": 3,
+              "upgrade_limit_mw": null,
+              "upgrade_year": null
+            }
+          ],
+          "loads": [
+            {
+              "bus": 1,
+              "firm_committed": {},
+              "id": "A",
+              "q": 1,
+              "ready_year": 2028,
+              "requested_mw": 200,
+              "rho": 0
+            },
+            {
+              "bus": 2,
+              "firm_committed": {},
+              "id": "B",
+              "q": 1,
+              "ready_year": 2028,
+              "requested_mw": 150,
+              "rho": 0
+            },
+            {
+              "bus": 3,
+              "firm_committed": {},
+              "id": "C",
+              "q": 1,
+              "ready_year": 2028,
+              "requested_mw": 250,
+              "rho": 0
+            }
+          ],
+          "model_version": "dc-1",
+          "policy_version": "policy-1",
+          "source": "synthetic",
+          "units": "MW",
+          "years": [
+            2028,
+            2029,
+            2030
+          ]
+        },
+        "input_hash": "51656650f7124d76f882bc986e9ed0028d6a140efd8491eb2eb5827916e4b836",
+        "model_version": "dc-1",
+        "policy_version": "policy-1",
+        "revision_ids": {},
+        "study_version": 1
+      }
+    },
+    {
+      "name": "G1 delayed \u2014 ready in 2030",
+      "run": {
+        "id": "abf9f0b8-6fb8-4ad6-9e7b-9ea48fc39413",
+        "scenario_id": "caedc2ea-10d3-44f9-b7ae-4a07fa7dadc0",
+        "status": "Succeeded",
+        "input_hash": "bd02bac4ee4606af0ed9cfca5d009cc89702bc61e96c1f2bdbccebbf85cf7069",
+        "study_version": 2,
+        "result": {
+          "check": {
+            "max_residual_mw": 2.842170943040401e-14,
+            "passed": true,
+            "violations": []
+          },
+          "input_hash": "a057c3883441883b3ef88b64abbedbeaa1618d9dc4c629d7f5b1e490d3d58696",
+          "model_version": "dc-1",
+          "objective": 1100.0,
+          "operations": [
+            {
+              "angles": {
+                "0": 0.0,
+                "1": -0.3,
+                "2": -0.4,
+                "3": -0.3
+              },
+              "condition": "peak",
+              "generators": [
+                {
+                  "available_mw": 500,
+                  "id": "G0",
+                  "p_mw": 300.0
+                },
+                {
+                  "available_mw": 0,
+                  "id": "G1",
+                  "p_mw": 0.0
+                }
+              ],
+              "lines": [
+                {
+                  "binding": true,
+                  "flow_mw": 300.0,
+                  "id": "L01",
+                  "limit_mw": 300
+                },
+                {
+                  "binding": true,
+                  "flow_mw": 100.0,
+                  "id": "L12",
+                  "limit_mw": 100
+                },
+                {
+                  "binding": false,
+                  "flow_mw": 0.0,
+                  "id": "L13",
+                  "limit_mw": 150
+                }
+              ],
+              "loads": [
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "A",
+                  "served_mw": 200.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "B",
+                  "served_mw": 100.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "C",
+                  "served_mw": 0.0
+                }
+              ],
+              "year": 2028
+            },
+            {
+              "angles": {
+                "0": 0.0,
+                "1": -0.3,
+                "2": -0.4,
+                "3": -0.3
+              },
+              "condition": "peak",
+              "generators": [
+                {
+                  "available_mw": 500,
+                  "id": "G0",
+                  "p_mw": 300.0
+                },
+                {
+                  "available_mw": 0,
+                  "id": "G1",
+                  "p_mw": 0.0
+                }
+              ],
+              "lines": [
+                {
+                  "binding": true,
+                  "flow_mw": 300.0,
+                  "id": "L01",
+                  "limit_mw": 300
+                },
+                {
+                  "binding": true,
+                  "flow_mw": 100.0,
+                  "id": "L12",
+                  "limit_mw": 100
+                },
+                {
+                  "binding": false,
+                  "flow_mw": 0.0,
+                  "id": "L13",
+                  "limit_mw": 150
+                }
+              ],
+              "loads": [
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "A",
+                  "served_mw": 200.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "B",
+                  "served_mw": 100.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "C",
+                  "served_mw": 0.0
+                }
+              ],
+              "year": 2029
+            },
+            {
+              "angles": {
+                "0": 0.0,
+                "1": -0.3,
+                "2": -0.4,
+                "3": -0.3
+              },
+              "condition": "peak",
+              "generators": [
+                {
+                  "available_mw": 500,
+                  "id": "G0",
+                  "p_mw": 300.0
+                },
+                {
+                  "available_mw": 200.0,
+                  "id": "G1",
+                  "p_mw": 200.0
+                }
+              ],
+              "lines": [
+                {
+                  "binding": true,
+                  "flow_mw": 300.0,
+                  "id": "L01",
+                  "limit_mw": 300
+                },
+                {
+                  "binding": true,
+                  "flow_mw": 100.0,
+                  "id": "L12",
+                  "limit_mw": 100
+                },
+                {
+                  "binding": false,
+                  "flow_mw": 0.0,
+                  "id": "L13",
+                  "limit_mw": 150
+                }
+              ],
+              "loads": [
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "A",
+                  "served_mw": 200.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "B",
+                  "served_mw": 100.0
+                },
+                {
+                  "curtailed_mw": 0.0,
+                  "id": "C",
+                  "served_mw": 200.0
+                }
+              ],
+              "year": 2030
+            }
+          ],
+          "reason": "Optimal DC screening result; independent physical and commitment checks passed",
+          "rows": [
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "A",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 0,
+              "year": 2028
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "A",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 0,
+              "year": 2029
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "A",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 0,
+              "year": 2030
+            },
+            {
+              "commissioning_cap_mw": 100.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "B",
+              "served_mw": 100.0,
+              "served_mwh": 100.0,
+              "waiting_years": 0,
+              "year": 2028
+            },
+            {
+              "commissioning_cap_mw": 100.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "B",
+              "served_mw": 100.0,
+              "served_mwh": 100.0,
+              "waiting_years": 0,
+              "year": 2029
+            },
+            {
+              "commissioning_cap_mw": 100.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "B",
+              "served_mw": 100.0,
+              "served_mwh": 100.0,
+              "waiting_years": 0,
+              "year": 2030
+            },
+            {
+              "commissioning_cap_mw": 0.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "C",
+              "served_mw": 0.0,
+              "served_mwh": 0.0,
+              "waiting_years": 2,
+              "year": 2028
+            },
+            {
+              "commissioning_cap_mw": 0.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "C",
+              "served_mw": 0.0,
+              "served_mwh": 0.0,
+              "waiting_years": 2,
+              "year": 2029
+            },
+            {
+              "commissioning_cap_mw": 200.0,
+              "curtailment_mwh": 0.0,
+              "project_id": "C",
+              "served_mw": 200.0,
+              "served_mwh": 200.0,
+              "waiting_years": 2,
+              "year": 2030
+            }
+          ],
+          "settings": {
+            "curtailment_penalty": 0.001,
+            "energy_scope": "sampled-period MWh",
+            "hours_per_year": 1,
+            "method": "highs-ds",
+            "monotonic_uncommitted_capacity": false,
+            "options": {
+              "dual_feasibility_tolerance": 1e-08,
+              "presolve": true,
+              "primal_feasibility_tolerance": 1e-08,
+              "time_limit": 10
+            },
+            "primary": "maximize equally weighted served MWh minus 0.001 * curtailed MWh",
+            "reference_bus": 0,
+            "secondary": "fix primary optimum; lexicographically maximize service by load ID then year; minimize total commissioned MW",
+            "susceptance_units": "MW/radian",
+            "tolerance_mw": 1e-06,
+            "waiting_threshold": "First year >= min(1 MW, requested MW * q) weighted-average service; null if unreached"
+          },
+          "solver_version": "scipy-1.17.0/HiGHS-1.8.0",
+          "status": "Succeeded"
+        },
+        "decision": {
+          "action": "Accepted",
+          "input_hash": "bd02bac4ee4606af0ed9cfca5d009cc89702bc61e96c1f2bdbccebbf85cf7069",
+          "policy_version": "policy-1",
+          "model_version": "dc-1",
+          "reason": "Accept the synthetic delayed scenario for internal planning. Retain the 100 MW B branch limit; external interconnection approval remains separate.",
+          "created_at": "2026-10-13T18:23:23.691690+00:00",
+          "external_authorization": null
+        }
+      },
+      "snapshot": {
+        "input": {
+          "base_loads": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0
+          },
+          "buses": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "conditions": [
+            {
+              "availability": 1,
+              "hours": 1,
+              "id": "peak"
+            }
+          ],
+          "generators": [
+            {
+              "bus": 0,
+              "capacity_mw": 500,
+              "id": "G0",
+              "ready_year": 2028
+            },
+            {
+              "bus": 3,
+              "capacity_mw": 200.0,
+              "id": "G1",
+              "ready_year": 2030
+            }
+          ],
+          "lines": [
+            {
+              "from_bus": 0,
+              "id": "L01",
+              "limit_mw": 300,
+              "susceptance": 1000,
+              "to_bus": 1,
+              "upgrade_limit_mw": null,
+              "upgrade_year": null
+            },
+            {
+              "from_bus": 1,
+              "id": "L12",
+              "limit_mw": 100,
+              "susceptance": 1000,
+              "to_bus": 2,
+              "upgrade_limit_mw": null,
+              "upgrade_year": null
+            },
+            {
+              "from_bus": 1,
+              "id": "L13",
+              "limit_mw": 150,
+              "susceptance": 1000,
+              "to_bus": 3,
+              "upgrade_limit_mw": null,
+              "upgrade_year": null
+            }
+          ],
+          "loads": [
+            {
+              "bus": 1,
+              "firm_committed": {},
+              "id": "A",
+              "q": 1,
+              "ready_year": 2028,
+              "requested_mw": 200,
+              "rho": 0
+            },
+            {
+              "bus": 2,
+              "firm_committed": {},
+              "id": "B",
+              "q": 1,
+              "ready_year": 2028,
+              "requested_mw": 150,
+              "rho": 0
+            },
+            {
+              "bus": 3,
+              "firm_committed": {},
+              "id": "C",
+              "q": 1,
+              "ready_year": 2028,
+              "requested_mw": 250,
+              "rho": 0
+            }
+          ],
+          "model_version": "dc-1",
+          "policy_version": "policy-1",
+          "source": "synthetic",
+          "units": "MW",
+          "years": [
+            2028,
+            2029,
+            2030
+          ]
+        },
+        "input_hash": "bd02bac4ee4606af0ed9cfca5d009cc89702bc61e96c1f2bdbccebbf85cf7069",
+        "model_version": "dc-1",
+        "policy_version": "policy-1",
+        "revision_ids": {
+          "G1": "8f4785bc-9cef-4ac4-8a4f-a73ff1ed99ab"
+        },
+        "study_version": 2
+      }
+    }
+  ]
+}

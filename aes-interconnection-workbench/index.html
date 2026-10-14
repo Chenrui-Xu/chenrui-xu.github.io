@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read-only review of published synthetic AES interconnection studies, model results and scenario comparisons.">
+  <title>AES Interconnection Workbench · Published study review</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#overview">Skip to study results</a>
+<aside class="sidebar">
+  <div class="wordmark"><span class="logo-mark" aria-hidden="true">A</span><div>AES<small>INTERCONNECTION WORKBENCH</small></div></div>
+  <p class="workspace-name">Study review workspace<span>SYNTHETIC PLANNING CASE</span></p>
+  <nav aria-label="Review sections">
+    <a class="active" href="#overview"><span aria-hidden="true">◫</span>Study results</a>
+    <a href="#comparison"><span aria-hidden="true">⇄</span>Compare scenarios</a>
+    <a href="#network"><span aria-hidden="true">⌁</span>Network & resources</a>
+    <a href="#provenance"><span aria-hidden="true">▤</span>Inputs & evidence</a>
+  </nav>
+  <div class="sidebar-bottom"><strong>Published review</strong><p>Explore frozen studies.<br>Download the underlying evidence.</p><small>Shared edits and a live solver require a hosted backend.</small></div>
+</aside>
+<main>
+  <header class="topbar"><span><i aria-hidden="true"></i> Published study review · read-only</span><span class="synthetic">Synthetic data · DC screening</span></header>
+  <div class="page-content">
+    <div class="page-heading"><div><p class="eyebrow">PLANNING / PUBLISHED STUDIES</p><h1>Interconnection study review</h1><p>See how a change in project timing affects service, network limits and an internal recommendation.</p></div><span class="badge">READ-ONLY</span></div>
+    <div class="boundary-bar"><strong>Review boundary</strong><p id="boundary">Synthetic demonstration. Internal recommendations are not external interconnection approvals.</p></div>
+    <div id="loading" role="status" class="card">Loading published model evidence…</div>
+    <div id="error" role="alert" hidden class="card error"></div>
+    <div id="viewer" hidden>
+      <section id="overview" aria-labelledby="overview-heading">
+        <div class="card selector-card"><div><h2 id="overview-heading">Published scenario</h2><p class="muted">Select an immutable study to inspect its recorded results.</p></div><label for="scenario-select">Study<select id="scenario-select"></select></label><div class="actions"><button id="download-json" class="primary">Download study JSON</button><button id="download-csv" class="secondary">Download results CSV</button></div></div>
+        <div id="results"></div>
+      </section>
+      <section id="comparison" class="card" aria-labelledby="comparison-heading"><div class="card-head"><h2 id="comparison-heading">Compare scenarios</h2><p>Δ = updated − original. All metrics are derived from the published result rows.</p></div><div class="compare-selects"><label for="original-select">Original study<select id="original-select"></select></label><span class="arrow" aria-hidden="true">→</span><label for="updated-select">Updated study<select id="updated-select"></select></label><button id="swap-studies" class="secondary">Swap studies</button></div><div id="comparison-results"></div></section>
+      <section id="network" class="card" aria-labelledby="network-heading"><div class="card-head"><h2 id="network-heading">Network & resource availability</h2><p>Flows and dispatch are recorded solver outputs for the selected study.</p></div><div id="network-results"></div></section>
+      <section id="provenance" class="card" aria-labelledby="provenance-heading"><div class="card-head"><h2 id="provenance-heading">Inputs, checks & decision record</h2><p>Inspect the frozen inputs and model configuration behind the selected result.</p></div><div id="evidence-results"></div></section>
+      <footer><span id="exported-at"></span><span>Published snapshot · no shared editing or live computation</span></footer>
+    </div>
+    <noscript><p class="card">JavaScript is required to display the published study evidence.</p></noscript>
+  </div>
+</main>
+</body>
+</html>
