@@ -1,4 +1,5 @@
 """Download a verified private source archive without persisting its download secret."""
+import argparse
 import hashlib
 import io
 import os
@@ -40,7 +41,11 @@ def extract_verified(data: bytes, expected: str, destination: Path) -> None:
 
 
 def main() -> None:
-    url = Path("/run/secrets/source_archive_url").read_text().strip()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--secret-file", default="/run/secrets/source_archive_url")
+    parser.add_argument("--destination", default="/source")
+    args = parser.parse_args()
+    url = Path(args.secret_file).read_text().strip()
     parsed = urlparse(url)
     if parsed.scheme != "https" or parsed.hostname != "codeload.github.com" or parsed.username:
         raise ValueError("Expected a GitHub HTTPS archive URL")
@@ -48,7 +53,7 @@ def main() -> None:
         data = response.read(40 * 1024 * 1024 + 1)
     if len(data) > 40 * 1024 * 1024:
         raise ValueError("Source archive exceeds download limit")
-    extract_verified(data, os.environ["SOURCE_ARCHIVE_SHA256"], Path("/source"))
+    extract_verified(data, os.environ["SOURCE_ARCHIVE_SHA256"], Path(args.destination))
     print("Verified private application source extracted")
 
 
