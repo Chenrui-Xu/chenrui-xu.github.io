@@ -25,6 +25,44 @@ const delta = (left, right) => typeof left === 'number' && typeof right === 'num
 const deltaCell = (value) => `<span class="${value < -1e-8 ? 'delta-negative' : value > 1e-8 ? 'delta-positive' : ''}">${signed(value)}</span>`;
 const isValid = (entry) => entry.run.status === 'Succeeded' && result(entry).status === 'Succeeded' && result(entry).check?.passed === true;
 
+// Account choice routes to the original backend login; it grants no permissions here.
+const accountScopes = {
+  gen: 'Generation developer: manage G0 / G1 resource submissions and timing.',
+  load: 'Load developer: manage project A and C submissions and requirements.',
+  loadb: 'Load developer: manage project B submissions and requirements.',
+  engineer: 'Planning engineer: create scenarios, run the model and compare study results.',
+  planner: 'Planning reviewer: inspect study evidence and record internal review decisions.'
+};
+async function startWorkbenchAccess() {
+  const select = $('workbench-account'), action = $('open-workbench');
+  const showScope = () => { $('workbench-scope').textContent = accountScopes[select.value] || ''; };
+  showScope();
+  try {
+    const response = await fetch('./workbench.json', {cache:'no-cache'});
+    if (!response.ok) throw new Error('Access configuration unavailable.');
+    const config = await response.json();
+    if (config.schema_version !== 1 || config.availability !== 'available' || typeof config.url !== 'string' || typeof config.notice !== 'string' || !config.notice.trim()) throw new Error('Full workbench unavailable.');
+    const base = new URL(config.url);
+    if (base.protocol !== 'https:' || base.username || base.password) throw new Error('Full workbench address unavailable.');
+    const update = () => {
+      showScope();
+      const target = new URL(base.href);
+      target.searchParams.set('account', select.value);
+      action.href = target.href;
+    };
+    select.disabled = false;
+    select.addEventListener('change', update);
+    update();
+    action.hidden = false;
+    $('workbench-availability').textContent = config.notice;
+  } catch (_) {
+    action.hidden = true;
+    action.removeAttribute('href');
+    select.disabled = true;
+    $('workbench-availability').textContent = 'The full workbench is currently unavailable. The published studies below remain available. Ask the site owner to restore the backend connection.';
+  }
+}
+
 function renderResults() {
   const entry = study(), r = result(entry);
   const valid = isValid(entry);
@@ -131,4 +169,5 @@ async function start() {
     $('error').textContent=`Unable to display this published study. ${error.message} Please reload the page or ask the publisher to refresh the export.`;
   }
 }
+startWorkbenchAccess();
 start();
